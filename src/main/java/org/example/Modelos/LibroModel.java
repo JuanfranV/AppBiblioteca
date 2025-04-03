@@ -7,14 +7,12 @@ import java.util.Scanner;
 public class LibroModel{
 
         private static List<LibroModel> listaLibros = new ArrayList<>();
-        private static List<LibroModel> listaCantidad = new ArrayList<>();
 
         static Scanner scanner = new Scanner(System.in);
         static LibroModel libro = new LibroModel();
-        static LibroModel cantidadLibro = new LibroModel();
 
         private String nombre;
-        private int cantidad;
+        private int cantidad = 5;
 
         public LibroModel(String nombre, int cantidad) {
                 this.nombre = nombre;
@@ -40,15 +38,9 @@ public class LibroModel{
                 this.cantidad = cantidad;
         }
 
-        public static void agregarLibro(String nombre, int cantidad) {
+        public static void agregarLibro(String nombre) {
                 System.out.print("Ingrese el título del libro: ");
                 nombre = scanner.nextLine();
-
-                System.out.println("Ingrese la cantidad en existencia: ");
-                cantidad = scanner.nextInt();
-
-                cantidadLibro.setCantidad(cantidad);
-                listaCantidad.add(cantidadLibro);
 
                 libro.setNombre(nombre);
                 listaLibros.add(libro);
@@ -60,9 +52,6 @@ public class LibroModel{
                 return listaLibros;
         }
 
-        public List<LibroModel> listarCantidad(){
-                return listaCantidad;
-        }
 
 
 }
