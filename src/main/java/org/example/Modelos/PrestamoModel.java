@@ -73,7 +73,6 @@ public class PrestamoModel extends LibroModel {
 
     public String prestamos(){
 
-        System.out.println("¿Desea realizar el prestamo? Si/No");
         siNO = scanner.nextLine().toUpperCase();
 
         if (numeroPrestados == 0){
