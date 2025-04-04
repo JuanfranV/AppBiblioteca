@@ -19,4 +19,6 @@ public class Accion extends JDialog{
         Accion dialog = new Accion();
         dialog.setVisible(true);
     }
+
+
 }

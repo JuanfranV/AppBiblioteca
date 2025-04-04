@@ -38,14 +38,8 @@ public class LibroModel{
                 this.cantidad = cantidad;
         }
 
-        public static void agregarLibro(String nombre) {
-                System.out.print("Ingrese el título del libro: ");
-                nombre = scanner.nextLine();
-
-                libro.setNombre(nombre);
+        public void agregarLibro(LibroModel libro) {
                 listaLibros.add(libro);
-
-                System.out.println("Libro agregado con éxito: " + nombre);
         }
 
         public List<LibroModel> listarLibros(){
