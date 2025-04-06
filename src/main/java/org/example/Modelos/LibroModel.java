@@ -2,14 +2,11 @@ package org.example.Modelos;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
 
 public class LibroModel{
 
         private static List<LibroModel> listaLibros = new ArrayList<>();
 
-        static Scanner scanner = new Scanner(System.in);
-        static LibroModel libro = new LibroModel();
 
         private String nombre;
         private int cantidad = 5;
@@ -45,6 +42,8 @@ public class LibroModel{
         public List<LibroModel> listarLibros(){
                 return listaLibros;
         }
+
+
 
 
 

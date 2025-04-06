@@ -13,6 +13,7 @@ public class LibroModel2 extends JDialog{
     private JTextField txtNombreLibro;
     private JTable table1;
     private JButton buttonVolver;
+
     private LibroModel libro = new LibroModel();
 
     public LibroModel2 (){
@@ -35,7 +36,7 @@ public class LibroModel2 extends JDialog{
                 if (libro.listarLibros() != null){
                     for (LibroModel fila: libro.listarLibros()){
                         model.addRow(new Object[]{
-                            fila.getNombre(),
+                                fila.getNombre(),
                             fila.getCantidad()
                         });
                     }
@@ -46,6 +47,16 @@ public class LibroModel2 extends JDialog{
                 txtNombreLibro.setText("");
             }
         });
+
+        buttonVolver.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Accion volverMenu= new Accion();
+                volverMenu.setVisible(true);
+                dispose();
+            }
+        });
+
     }
 
     public static void main(String[] args){
